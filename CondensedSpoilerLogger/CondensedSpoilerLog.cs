@@ -18,10 +18,10 @@ namespace CondensedSpoilerLogger
             SpoilerReader sr = new(args);
             StringBuilder sb = new();
 
-            sb.AppendLine($"Condensed spoiler log for seed: {args.gs.Seed}");
+            sb.AppendLine($"Condensed spoiler log for 种子: {args.gs.Seed}");
             sb.AppendLine();
 
-            sb.AppendLine("----------Major Progression:----------");
+            sb.AppendLine("----------主要技能及物品:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Mothwing_Cloak, forceMulti: true);
             sr.AddItemToStringBuilder(sb, ItemNames.Left_Mothwing_Cloak, forceMulti: true);
             sr.AddItemToStringBuilder(sb, ItemNames.Right_Mothwing_Cloak, forceMulti: true);
@@ -41,7 +41,7 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.Swim, forceMulti: true);
             sb.AppendLine();
 
-            sb.AppendLine("----------Spells:----------");
+            sb.AppendLine("----------法术:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Vengeful_Spirit, forceMulti: true);
             sr.AddItemToStringBuilder(sb, ItemNames.Desolate_Dive, forceMulti: true);
             sr.AddItemToStringBuilder(sb, ItemNames.Howling_Wraiths, forceMulti: true);
@@ -50,11 +50,11 @@ namespace CondensedSpoilerLogger
 
             if (sr.HasRandomizedAny(ItemNames.Leftslash, ItemNames.Rightslash, ItemNames.Upslash, ItemNames.Downslash))
             {
-                sb.AppendLine("----------Nail Slashes:----------");
+                sb.AppendLine("----------骨钉:----------");
             }
             else
             {
-                sb.AppendLine("----------Nail Arts:----------");
+                sb.AppendLine("----------剑技:----------");
             } 
             sr.AddItemToStringBuilder(sb, ItemNames.Cyclone_Slash);
             sr.AddItemToStringBuilder(sb, ItemNames.Great_Slash);
@@ -69,18 +69,18 @@ namespace CondensedSpoilerLogger
             }
             sb.AppendLine();
 
-            sb.AppendLine("----------Dreamers:----------");
+            sb.AppendLine("----------守梦者:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Lurien);
             sr.AddItemToStringBuilder(sb, ItemNames.Monomon);
             sr.AddItemToStringBuilder(sb, ItemNames.Herrah);
             sr.AddItemToStringBuilder(sb, ItemNames.Dreamer);
             sb.AppendLine();
 
-            sb.AppendLine("----------White Fragments:----------");
+            sb.AppendLine("----------白色碎片:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Kingsoul);
             sb.AppendLine();
 
-            sb.AppendLine("----------Stag Stations:----------");
+            sb.AppendLine("----------鹿角虫站:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Dirtmouth_Stag);
             sr.AddItemToStringBuilder(sb, ItemNames.Crossroads_Stag);
             sr.AddItemToStringBuilder(sb, ItemNames.Greenpath_Stag);
@@ -94,7 +94,7 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.Stag_Nest_Stag);
             sb.AppendLine();
 
-            sb.AppendLine("----------Keys: ----------");
+            sb.AppendLine("----------钥匙: ----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Simple_Key);
             sr.AddItemToStringBuilder(sb, ItemNames.Shopkeepers_Key);
             sr.AddItemToStringBuilder(sb, ItemNames.Elegant_Key);
@@ -106,7 +106,7 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.City_Crest);
             sb.AppendLine();
 
-            sb.AppendLine("----------Quest Charms:----------");
+            sb.AppendLine("----------任务护符:----------");
             sr.AddItemToStringBuilder(sb, "Grimmchild");
             sr.AddItemToStringBuilder(sb, ItemNames.Spore_Shroom);
             sr.AddItemToStringBuilder(sb, ItemNames.Defenders_Crest);
@@ -115,7 +115,7 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.Fragile_Heart);
             sb.AppendLine();
 
-            sb.AppendLine("----------Useful Charms:----------");
+            sb.AppendLine("----------有用护符:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Dashmaster);
             sr.AddItemToStringBuilder(sb, ItemNames.Shaman_Stone);
             sr.AddItemToStringBuilder(sb, ItemNames.Spell_Twister);
@@ -123,7 +123,7 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.Wayward_Compass);
             sb.AppendLine();
 
-            sb.AppendLine("----------Baldur Killers:----------");
+            sb.AppendLine("----------杀巴护符:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Grubberflys_Elegy);
             sr.AddItemToStringBuilder(sb, ItemNames.Glowing_Womb);
             sr.AddItemToStringBuilder(sb, ItemNames.Weaversong);
@@ -156,7 +156,7 @@ namespace CondensedSpoilerLogger
                 }
             }
 
-            LogManager.Write(sb.ToString(), "CondensedSpoilerLog.txt");
+            LogManager.Write(sb.ToString(), "精简剧透日志.txt");
         }
     }
 }
