@@ -14,7 +14,7 @@ namespace CondensedSpoilerLogger
 
             StringBuilder sb = new();
 
-            sb.AppendLine($"Notch costs with seed: {args.gs.Seed}");
+            sb.AppendLine($"Notch costs with 种子: {args.gs.Seed}");
             sb.AppendLine();
 
             int tot = 0;
@@ -27,9 +27,9 @@ namespace CondensedSpoilerLogger
 
             sb.AppendLine();
             int perc = Mathf.RoundToInt(tot / 90f * 100f);
-            sb.AppendLine($"Total: {tot}. This is {perc}% of the vanilla total.");
+            sb.AppendLine($"总共: {tot}。 这是原版总和的 {perc}%.");
 
-            LogManager.Write(sb.ToString(), "NotchCostSpoiler.txt");
+            LogManager.Write(sb.ToString(), "护符的护符槽费用剧透日志.txt");
         }
     }
 }

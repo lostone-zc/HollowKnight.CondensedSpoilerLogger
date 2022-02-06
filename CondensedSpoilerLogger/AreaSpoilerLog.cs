@@ -44,7 +44,7 @@ namespace CondensedSpoilerLogger
                 }
             }
 
-            sb.AppendLine($"Area spoiler log for seed: {args.gs.Seed}");
+            sb.AppendLine($"Area spoiler log for 种子: {args.gs.Seed}");
             sb.AppendLine();
             foreach (var mapAreaGroup in LocationGrouping.Values)
             {
@@ -77,7 +77,7 @@ namespace CondensedSpoilerLogger
                 sb.AppendLine();
             }
 
-            LogManager.Write(sb.ToString(), "AreaSortedItemSpoilerLog.txt");
+            LogManager.Write(sb.ToString(), "剧透日志（以区域分组）.txt");
         }
     }
 }
