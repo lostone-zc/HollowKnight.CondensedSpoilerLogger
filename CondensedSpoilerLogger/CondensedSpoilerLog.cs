@@ -41,6 +41,12 @@ namespace CondensedSpoilerLogger
             sr.AddItemToStringBuilder(sb, ItemNames.Swim, forceMulti: true);
             sb.AppendLine();
 
+            sb.AppendLine("----------三垃圾:----------");
+            sr.AddItemToStringBuilder(sb, ItemNames.Collectors_Map);
+            sr.AddItemToStringBuilder(sb, ItemNames.World_Sense);
+            sr.AddItemToStringBuilder(sb, ItemNames.Godtuner);
+            sb.AppendLine();
+
             sb.AppendLine("----------法术:----------");
             sr.AddItemToStringBuilder(sb, ItemNames.Vengeful_Spirit, forceMulti: true);
             sr.AddItemToStringBuilder(sb, ItemNames.Desolate_Dive, forceMulti: true);
